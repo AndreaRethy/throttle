@@ -1,11 +1,14 @@
 function throttle(func: (...args: any[]) => void, delay: number) {
+    let isWaiting: boolean = false
     let timeout: NodeJS.Timeout | null = null
     return (...args: any[]) => {
-        if (timeout) {
-            clearTimeout(timeout);
-        }
+        if (isWaiting) return;
+        
+        func(...args);
+        isWaiting = true;
+
         timeout = setTimeout(() => {
-            func(...args);
+            isWaiting = false;
         }, delay);
     };
 }
