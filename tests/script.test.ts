@@ -1,9 +1,9 @@
 import { addNewItem, throttle } from '../src/script';
 
-test('It should execute only once, only first event', () => {
+test('It should execute once immediately, after 1s execute again', () => {
     let array: string[] = [];
 
-    jest.useFakeTimers()
+    jest.useFakeTimers();
 
     const throttledAddNewItem = throttle(() => addNewItem(array, 'done'), 1000);
 
@@ -13,5 +13,5 @@ test('It should execute only once, only first event', () => {
 
     jest.advanceTimersByTime(1000);
 
-    expect(array).toEqual(['done']);
+    expect(array).toEqual(['done', 'done']);
 });
