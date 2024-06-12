@@ -9,7 +9,7 @@ program
     let array: string[] = [];
 
     //Define throttle function
-    const throttledAddNewItem = throttle(() => addNewItem(array, item), 1000);
+    const throttledAddNewItem = throttle(() => {addNewItem(array, item); console.log(array);}, 1000);
 
     // Simulate rapid calls
     throttledAddNewItem();
