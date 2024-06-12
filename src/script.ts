@@ -16,12 +16,12 @@ function throttle(func: (...args: any[]) => void, delay: number) {
         if (isWaiting) {
             waitingInput = args;
             return;
-        }
-        
-        func(...args);
-        isWaiting = true;
+        } else {
+            func(...args);
+            isWaiting = true;
 
-        setTimeout(timeout, delay);
+            setTimeout(timeout, delay);
+        }
     };
 }
 

@@ -1,6 +1,6 @@
 import { addNewItem, throttle } from '../src/script';
 
-test('It should execute once immediately, after 1s execute again', () => {
+test('It should execute once immediately and after 1s execute again', () => {
     let array: string[] = [];
 
     jest.useFakeTimers();
