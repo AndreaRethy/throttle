@@ -1,4 +1,4 @@
-function throttle(func: (...args: any[]) => void, delay: number) {
+export function throttle(func: (...args: any[]) => void, delay: number) {
     let isWaiting: boolean = false
     let waitingInput: any[] | null;
     
@@ -25,8 +25,8 @@ function throttle(func: (...args: any[]) => void, delay: number) {
     };
 }
 
-function addNewItem(array: string[], item: string) {
+export function addNewItem(array: string[], item: string) {
     array.push(item);
 }
 
-export { addNewItem, throttle }
+//export { addNewItem, throttle }

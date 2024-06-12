@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.throttle = exports.addNewItem = void 0;
+exports.addNewItem = exports.throttle = void 0;
 function throttle(func, delay) {
     var isWaiting = false;
     var waitingInput;
@@ -35,3 +35,4 @@ function addNewItem(array, item) {
     array.push(item);
 }
 exports.addNewItem = addNewItem;
+//export { addNewItem, throttle }
