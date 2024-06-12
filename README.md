@@ -13,3 +13,7 @@ You should see two console logs: one immediatly with an array and your item, Ano
 ```
 npm run cli add 'item'
 ```
+
+## Test Front-End
+
+Open the index.html in browser and move your mouse. The throttled counter should increase every 0.5s instead of every mousemovement.
